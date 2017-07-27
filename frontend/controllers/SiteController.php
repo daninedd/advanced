@@ -210,4 +210,16 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    /**
+     * Resets password.
+     *
+     * @param string $token
+     * @return mixed
+     * @throws BadRequestHttpException
+     */
+    public function actionHello($mes = "hello")
+    {
+        return $this->render('hello');
+    }
 }
