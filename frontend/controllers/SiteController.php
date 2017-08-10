@@ -12,6 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\EntryForm;
 
 /**
  * Site controller
@@ -212,14 +213,25 @@ class SiteController extends Controller
     }
 
     /**
-     * Resets password.
-     *
-     * @param string $token
-     * @return mixed
-     * @throws BadRequestHttpException
+
      */
     public function actionHello($mes = "hello")
     {
         return $this->render('hello');
+    }
+
+    /**
+     *创建表单
+     */
+    public function actionEntry()
+    {
+        $model = new EntryForm();
+        if($model->load(Yii::$app->request->post()) && $model->validate()){
+
+            return $this->render("entry-confirm",["model"=>$model]);
+        }else{
+
+            return $this->render("entry",["model"=>$model]);
+        }
     }
 }

@@ -6,6 +6,7 @@ return [
             'dsn' => 'mysql:host=localhost;dbname=halfpricebuy',
             'username' => 'root',
             'password' => '',
+            'tablePrefix'=> 'd_',
             'charset' => 'utf8',
         ],
         'mailer' => [
