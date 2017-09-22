@@ -19,14 +19,17 @@ return [
         ]
     ],
     'controllerNamespace' => 'alei\controllers',
+
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            //'identityClass' => 'common\models\User',
+            'identityClass' => 'alei\modules\admin\model\AAdmin',
             'enableAutoLogin' => false,
             'identityCookie' => ['name' => '_identity-alei', 'httpOnly' => true],
+            'loginUrl' => ['admin/site/login']      //此处设置默认登录页，如果未登录就会跳转到该页
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
@@ -52,6 +55,7 @@ return [
                 'index' => 'index/site/index',
             ],
         ],
+
 
     ],
     'defaultRoute' => 'index/site/index',//默认路由

@@ -15,36 +15,33 @@ class SiteController extends BaseController
 
     //取消CSRF验证
     public $enableCsrfValidation=false;
-    /**
-     * @inheritdoc
-     */
-//    public function behaviors()
-//    {
-//        return [
-//            'access' => [
-//                'class' => AccessControl::className(),
-//                'rules' => [
-//                    [
-//                        'actions' => ['login','error','index','asd','islogin'],
-//                        'allow' => true,
-//                        'roles' => ['?'],
-//                    ],
-//                    [
-//                        'actions' => ['logout', 'index'],
-//                        'allow' => true,
-//                        'roles' => ['@'],
-//                    ],
-//                ],
-//            ],
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-//                    'logout' => ['post'],
-//                ],
-//            ],
-//        ];
-//    }
 
+
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['logout', 'index'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }
     /**
      * @inheritdoc
      */
@@ -65,9 +62,6 @@ class SiteController extends BaseController
     public function actionIndex()
     {
 
-
-        //var_dump(Yii::getAlias('@webix'));exit;
-
         return $this->render('test');
     }
 
@@ -78,7 +72,19 @@ class SiteController extends BaseController
      */
     public function actionLogin()
     {
+        $this->layout = '\main';
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
 
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
@@ -95,12 +101,5 @@ class SiteController extends BaseController
 
     public function actionError(){
         echo 32545;exit;
-    }
-
-    public function actionIslogin(){
-
-        if (Yii::$app->user->isGuest) {
-        }
-
     }
 }

@@ -29,6 +29,10 @@ class ComposerStaticInitbfb2111f2e63289f3934a88bf919b694
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'm' => 
+        array (
+            'mdm\\admin\\' => 10,
+        ),
         'c' => 
         array (
             'cebe\\markdown\\' => 14,
@@ -106,9 +110,13 @@ class ComposerStaticInitbfb2111f2e63289f3934a88bf919b694
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            0 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
+        ),
+        'mdm\\admin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mdmsoft/yii2-admin',
         ),
         'cebe\\markdown\\' => 
         array (

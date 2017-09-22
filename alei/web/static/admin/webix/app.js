@@ -31,29 +31,12 @@ define([
 		});
 
 	//configuration
-	webix.ajax().post("admin/site/islogin",{},function(text){
-
-		text = JSON.parse(text);
-		if(text == "fail"){
-
-			var app = core.create({
-				id:			"admin-demo",
-				name:		"Webix Admin",
-				version:	"0.1",
-				debug:		true,
-				start:		"/app/login"
-			});
-
-		}else if(text == "success"){
-			var app = core.create({
-				id:			"admin-demo",
-				name:		"Webix Admin",
-				version:	"0.1",
-				debug:		true,
-				start:		"/app/buies_lists"
-			});
-		}
-
+	var app = core.create({
+		id:			"admin-demo",
+		name:		"Webix Admin",
+		version:	"0.1",
+		debug:		true,
+		start:		"/app/buies_lists"
 	});
 
 
