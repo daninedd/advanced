@@ -378,6 +378,7 @@ class Controller extends Component implements ViewContextInterface
      */
     public function render($view, $params = [])
     {
+
         $content = $this->getView()->render($view, $params, $this);
         return $this->renderContent($content);
     }

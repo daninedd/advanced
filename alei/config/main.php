@@ -15,7 +15,7 @@ return [
             'class' => 'alei\modules\index\Module'
         ],
         'admin' => [
-            'class' => 'alei\modules\admin\Module'
+            'class' => 'alei\modules\admin\Module',
         ]
     ],
     'controllerNamespace' => 'alei\controllers',
@@ -42,17 +42,19 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'admin/site/error',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'admin' => 'admin/site/index',
+                'index' => 'index/site/index',
             ],
         ],
 
     ],
-    'defaultRoute' => 'index/site/index',
+    'defaultRoute' => 'index/site/index',//默认路由
     'params' => $params,
 ];
 

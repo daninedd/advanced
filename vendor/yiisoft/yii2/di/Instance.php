@@ -110,6 +110,7 @@ class Instance
      */
     public static function ensure($reference, $type = null, $container = null)
     {
+
         if (is_array($reference)) {
             $class = isset($reference['class']) ? $reference['class'] : $type;
             if (!$container instanceof Container) {

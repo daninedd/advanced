@@ -1,53 +1,25 @@
-<?php
-
-/* @var $this yii\web\View */
-
-$this->title = '我的后台';
-?>
-<!--<div class="site-index">-->
-<!---->
-<!--    <div class="jumbotron">-->
-<!--        <h1>Congratulations!</h1>-->
-<!---->
-<!--        <p class="lead">You have successfully created your Yii-powered application.</p>-->
-<!---->
-<!--        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="body-content">-->
-<!---->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-4">-->
-<!--                <h2>Heading</h2>-->
-<!---->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
-<!--                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
-<!--                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu-->
-<!--                    fugiat nulla pariatur.</p>-->
-<!---->
-<!--                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>-->
-<!--            </div>-->
-<!--            <div class="col-lg-4">-->
-<!--                <h2>Heading</h2>-->
-<!---->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
-<!--                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
-<!--                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu-->
-<!--                    fugiat nulla pariatur.</p>-->
-<!---->
-<!--                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>-->
-<!--            </div>-->
-<!--            <div class="col-lg-4">-->
-<!--                <h2>Heading</h2>-->
-<!---->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
-<!--                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip-->
-<!--                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu-->
-<!--                    fugiat nulla pariatur.</p>-->
-<!---->
-<!--                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!--</div>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bi System</title>
+    <!-- Webix Library -->
+    <script type="text/javascript" src="/static/admin/js/webix.js"></script>
+    <script type="text/javascript" src="/static/admin/js/spreadsheet.js"></script>
+    <link rel="stylesheet" href="/static/admin/css/spreadsheet.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/static/admin/css/webix.css">
+    <link rel="stylesheet/less" href="/static/admin/webix/assets/theme.siberia.less">
+    <!-- The app's logic -->
+    <script type="text/javascript" data-main="/static/admin/webix/app" src="/static/admin/webix/libs/require.js"></script>
+    <script type="text/javascript">
+        require.config({
+            paths: {
+                text:"libs/text"
+            }
+        });
+    </script>
+    <!-- Development only -->
+    <script type="text/javascript" src="/static/admin/webix/libs/less.min.js"></script>
+</head>
+<body></body>
+</html>

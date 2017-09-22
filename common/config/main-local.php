@@ -3,10 +3,10 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=halfpricebuy',
-            'username' => 'root',
-            'password' => '',
-            'tablePrefix'=> 'd_',
+            'dsn' => 'pgsql:host=localhost;dbname=postgis_23_sample',
+            'username' => 'postgres',
+            'password' => 'Q!W@E#R$',
+            'tablePrefix'=> '',
             'charset' => 'utf8',
         ],
         'mailer' => [
