@@ -1,0 +1,9 @@
+diff a/template/Index/views/menus/sidebar.js b/template/Index/views/menus/sidebar.js	(rejected hunks)
+@@ -30,6 +30,7 @@
+ 					},
+ 					data:[
+ 						{id: "main", value: "系统管理", open: true, data:[
++							{ id: "dashboard", value: "购买记录", icon: "home", $css: "dashboard", details:"reports and statistics"},
+ 							{ id: "extract", value: "提现记录", icon: "check-square-o", $css: "orders", details:"order reports and editing"},
+ 							{ id: "u_user_recharge", value: "充值记录", icon: "cube", $css: "products", details:"all products"},
+ 							{ id: "u_user_bill", value: "实名认证扣费", icon: "pencil-square-o", details: "changing product data"}
